@@ -3,7 +3,6 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 import TextInput from "../../common/component/TextInput";
 import LoginButton from "./LoginButton";
 
-
 class LoginForm extends Component {
     render() {
         return (

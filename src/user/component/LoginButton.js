@@ -1,4 +1,6 @@
 import BasicButton from '../../common/component/BasicButton';
+import 'jquery';
+// import JSEncrypt from '../../lib/jsencrypt.min';
 
 class LoginButton extends BasicButton {
     handleClick(event) {
@@ -34,9 +36,14 @@ function login() {
     }).then(function (data) {
         alert("ok");
         console.log(data);
+        encode();
     }).catch(function (err) {
         alert('跪了');
     });
+}
+
+function encode() {
+    var encrypt = new JSEncrypt();
 }
 
 
