@@ -6,7 +6,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 class BasicButton extends BasicComponent {
     render() {
         return (
-            <input id={this.id()} type='button' className='btn tn-primary' value={this.buttonText()} onClick={this.handleClick}/>
+            <input id={this.id()} type='button' className='btn tn-primary' value={this.value()} onClick={this.handleClick}/>
         );
     }
 
@@ -14,9 +14,6 @@ class BasicButton extends BasicComponent {
         alert("123");
     }
 
-    buttonText() {
-        return "no defined";
-    }
 
 }
 

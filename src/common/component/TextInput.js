@@ -6,15 +6,8 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 class TextInput extends BasicComponent {
     render() {
         return (
-            <input id={this.id()} type={this.inputType()}/>
+            <input id={this.id()} className={this.className()} type={this.type()}/>
         );
-    }
-
-    inputType() {
-        if (typeof(this.props.type) === 'undefined')
-            return 'text';
-        else
-            return this.props.type;
     }
 
 }

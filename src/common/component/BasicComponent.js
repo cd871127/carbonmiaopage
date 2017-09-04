@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 
 class BasicComponent extends Component {
     id() {
@@ -6,6 +6,27 @@ class BasicComponent extends Component {
             return '';
         else
             return this.props.id;
+    }
+    className()
+    {
+        if (typeof(this.props.className) === 'undefined')
+            return '';
+        else
+            return this.props.className;
+    }
+
+    type() {
+        if (typeof(this.props.type) === 'undefined')
+            return '';
+        else
+            return this.props.type;
+    }
+
+    value() {
+        if (typeof(this.props.value) === 'undefined')
+            return '';
+        else
+            return this.props.value;
     }
 }
 
