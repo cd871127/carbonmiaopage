@@ -36,15 +36,15 @@ function login() {
     }).then(function (data) {
         alert("ok");
         console.log(data);
-        encode();
+        // encode();
     }).catch(function (err) {
         alert('跪了');
     });
 }
 
-function encode() {
-    var encrypt = new JSEncrypt();
-}
+// function encode() {
+//     var encrypt = new JSEncrypt();
+// }
 
 
 export default LoginButton;
