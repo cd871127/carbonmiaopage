@@ -1,6 +1,9 @@
 import {Component} from 'react';
 
 class BasicComponent extends Component {
+    constructor(props) {
+        super(props);
+    }
     id() {
         if (typeof(this.props.id) === 'undefined')
             return '';

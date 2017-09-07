@@ -3,9 +3,14 @@ import getPublicKey from '../../common/action/authorization';
 import {encode} from '../../common/action/authorization';
 
 class LoginButton extends BasicButton {
-    handleClick(event) {
-        login();
+    constructor(props) {
+        super(props);
+        // this.handleClick.bind(this);
     }
+    //
+    // handleClick(event) {
+    //     alert(1234);
+    // }
 }
 //请求公钥,加密后,发送给服务器,服务器用私钥解密
 function login() {
@@ -36,7 +41,4 @@ function login() {
         });
     });
 }
-
-
-
 export default LoginButton;
