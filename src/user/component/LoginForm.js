@@ -4,6 +4,7 @@ import TextInput from "../../common/component/TextInput";
 import LoginButton from "./LoginButton";
 import request from '../../common/util/request';
 import encode from '../../common/util/encrypt';
+import {server_host} from "../../common/util/parameters";
 
 class LoginForm extends Component {
     constructor(props) {
@@ -69,7 +70,7 @@ class LoginForm extends Component {
             return;
         }
         console.log(passWord);
-        request('http://localhost:18888/auth/key/' + userName, {
+        request(server_host+'/auth/key/' + userName, {
             method: 'GET',
             mode: 'cors',
             credentials: 'include',

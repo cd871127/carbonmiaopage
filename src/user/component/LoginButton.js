@@ -1,6 +1,7 @@
 import BasicButton from '../../common/component/BasicButton';
 import getPublicKey from '../../common/action/authorization';
 import {encode} from '../../common/action/authorization';
+import {server_host} from "../../common/util/parameters";
 
 class LoginButton extends BasicButton {
     constructor(props) {
@@ -23,7 +24,7 @@ function login() {
             alert('error');
             return;
         }
-        fetch('http://localhost:18888/users/' + userInfo.userName + '?passWord=' + userInfo.passWord, {
+        fetch(server_host+'/users/' + userInfo.userName + '?passWord=' + userInfo.passWord, {
             method: 'GET',
             mode: 'cors',
             credentials: 'include',
