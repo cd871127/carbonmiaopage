@@ -42,4 +42,5 @@ function login() {
         });
     });
 }
+
 export default LoginButton;
