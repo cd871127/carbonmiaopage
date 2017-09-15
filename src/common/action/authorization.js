@@ -9,7 +9,6 @@ function encode(data, userName) {
     }).then(function (response) {
         return response.json();
     }).then(function (publicKey) {
-        // let e = encode(publicKey, "你好");
         let encrypt = new JSEncrypt();
         encrypt.setPublicKey(publicKey.resultData);
         console.log(publicKey);
